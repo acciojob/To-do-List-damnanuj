@@ -7,8 +7,10 @@ const inputVal = document.getElementById("newTodoInput");
 
 function listAdd (){
 	const li = document.createElement("li");
-	li.innerText = inputVal.value;
-	ol.appendChild(li);
+	if(inputVal.value){	
+		li.innerText = inputVal.value;
+		ol.appendChild(li);
+	}
 	inputVal.value = ""
 }
 
